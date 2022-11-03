@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+#To not upload service account credentials to repository
+.firebase
+.env
+
 # testing
 /coverage
 
