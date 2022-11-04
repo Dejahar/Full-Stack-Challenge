@@ -33,11 +33,6 @@ const getAllGenres = async (req, res) => {
   }
 }
 
-//!GET SEARCHED GIF
-const getSearchedGifs = async (req, res) => {
-	res.status(200).send("ok");
-}
-
 //!POST GIF
 const addGif = async (req, res) => {
 	res.status(200).send("ok");
@@ -52,7 +47,6 @@ const removeGif = async (req, res)=> {
 module.exports = {
   getGifs: getGifs,
   getGifsByGenre: getGifsByGenre,
-  getSearchedGifs: getSearchedGifs,
   getAllGenres: getAllGenres,
   addGif: addGif,
   removeGif: removeGif,

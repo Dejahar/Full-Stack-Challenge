@@ -1,13 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.mainButtonBg {
+  background: #6a3093;
+  background: -webkit-linear-gradient(to right, #6a3093, #a044ff);
+  background: linear-gradient(to right, #6a3093, #a044ff);
+}
+
+.bg-opacity-loader {
+  background-color: #000000e3;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.dark-button {
+  @apply rounded-md bg-black text-white py-3 px-3 hover:bg-white hover:text-black ease-in-out duration-300 hover:scale-105;
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: var(--speed) ease;
+}
+
+.inactive {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: var(--speed) ease;
 }
