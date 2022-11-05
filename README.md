@@ -85,7 +85,7 @@ AIT Student Full Stack Challenge
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="https://user-images.githubusercontent.com/113899063/199277261-abee0b0d-1e8a-41ad-8837-33229200890c.png" alt='dashboard'>
+<img src="https://user-images.githubusercontent.com/9042302/200136491-f21fc2b8-0269-42ae-b31e-dbd4c80d0d17.png" alt='dashboard'>
 
 Even as a sprint Project I tried to improve upon certain aspects, leading to some crucial erros considering the time restraints. With these time restraints and the errors I was having I tryed to focus more into a viewable experience.
 
