@@ -8,7 +8,6 @@ import { getGifByID } from "api/gifs";
 
 const Gif = () => {
   const { gifID } = useParams();
-	console.log(gifID);
 
   // const [gifData, setgifData] = useState();
 
@@ -26,8 +25,6 @@ const Gif = () => {
     // </DashboardSection>;
     return isError;
   }
-
-  console.log(data);
 
   return (
     <>

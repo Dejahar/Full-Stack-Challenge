@@ -14,13 +14,13 @@ export const getGifByID = async (gifID) => {
 
 //!GET GIFS BY GENRE
 export const getGifsByGenre = async (genre) => {
-  const response = await api.get(`/genres/${genre}}`);
+  const response = await api.get(`/gifs/genres/${genre}`);
   return response.data;
 };
 
 //!GET ALL GENRES
 export const getAllGenres = async () => {
-  const response = await api.get(`/gifs/genres}`);
+  const response = await api.get(`/gifs/genres`);
   return response.data;
 };
 

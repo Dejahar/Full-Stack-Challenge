@@ -3,7 +3,8 @@ import { useQuery } from "@tanstack/react-query";
 import Loader from "components/loader";
 import GifCard from "components/gifCard";
 
-const CardsRowByGenre = ([genre]) => {
+const CardsRowByGenre = ({genre}) => {
+  console.log(genre);
   const { data, isLoading, isError } = useQuery([`gifs-${genre}`], () => getGifsByGenre(genre));
 
   if (isLoading) {
@@ -13,6 +14,8 @@ const CardsRowByGenre = ([genre]) => {
   if (isError) {
     // navigate("/error");
   }
+
+  console.log(data);
 
   return (
     <section className="md:my-10 my-5">
