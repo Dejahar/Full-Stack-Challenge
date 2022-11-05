@@ -23,6 +23,17 @@ const getGifsByGenre = async (req, res) => {
   }
 }
 
+//!GET GIF BY ID
+const  getGifsByID= async (req, res) => {
+  const { gifID } = req.params;
+  try {
+    const gif = await model.Gif.findById(gifID);
+    res.status(200).send(gif);
+  } catch (error) {
+    res.status(504).send({ message: error.message });
+  }
+}
+
 //!GET ALL DISTINCT GENRES
 const getAllGenres = async (req, res) => {
   try {
@@ -34,9 +45,18 @@ const getAllGenres = async (req, res) => {
 }
 
 //!POST GIF
-const addGif = async (req, res) => {
-	res.status(200).send("ok");
-
+const uploadGif = async (req, res) => {
+  const { link, title, genre } = req.body;
+  try {
+    const gif = await model.Gif.create({
+      title,
+      link,
+      genre
+    })
+    res.status(200).send(gif);
+  } catch (error) {
+    res.status(504).send({ message: error.message });
+  }
 }
 
 //!DELETE GIF
@@ -48,6 +68,7 @@ module.exports = {
   getGifs: getGifs,
   getGifsByGenre: getGifsByGenre,
   getAllGenres: getAllGenres,
-  addGif: addGif,
+  getGifsByID: getGifsByID,
+  uploadGif: uploadGif,
   removeGif: removeGif,
 };

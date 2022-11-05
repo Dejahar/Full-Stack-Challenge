@@ -5,16 +5,15 @@ const admin = require("../services/firebase");
 //!POST CREATE NEW USER
 const registerUser = async (req, res) => {
   try {
-    const { firstName, lastName, email, password, gifs } = req.body;
+    const { firstName, lastName, _id } = req.body;
     const user = await model.User.create({
+      _id: _id,
       firstName,
       lastName,
-      email,
-      password,
-      gifs
     });
 
-    res.status(200).send(user);
+    await user.save();
+    res.status(200).send({message: 'User created successfully!'});
   } catch (error) {
     res.status(504).send(error);
   }

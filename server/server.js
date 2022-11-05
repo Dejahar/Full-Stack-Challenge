@@ -23,12 +23,12 @@ app.use(cors(corsOptions));
 // const validateToken = require("./middlewares/validateToken");
 
 //!REQUIRE CONST ROUTES
-const userRoutes = require("./routes/userRoutes");
-const gifRoutes = require("./routes/gifRoutes");
+const userRoutes = require("./routes/usersRoutes");
+const gifRoutes = require("./routes/gifsRoutes");
 
 //!ROUTES
-app.use("/user", userRoutes);
-app.use("/gif", gifRoutes);
+app.use("/users", userRoutes);
+app.use("/gifs", gifRoutes);
 
 //!PORT TO LISTEN
 app.listen(process.env.PORT, () => {
